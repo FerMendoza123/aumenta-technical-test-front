@@ -7,7 +7,7 @@ import { NavigationBarComponent } from './purchase/navigation-bar/navigation-bar
 import { ProductsListComponent } from './purchase/products-list/products-list.component';
 import { CartComponent } from './purchase/cart/cart.component';
 import { ProductComponent } from './purchase/products-list/product/product.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
