@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Product, AddedProduct } from 'src/Interfaces/interfaces';
 import { PurchaseService } from 'src/Services/purchase.service';
 
@@ -9,7 +10,9 @@ import { PurchaseService } from 'src/Services/purchase.service';
 })
 export class ProductComponent {
   @Input() product! : Product;
-  constructor(private _purchaseService : PurchaseService){
+  constructor(private _purchaseService : PurchaseService,
+    private _toastrService : ToastrService
+  ){
 
   }
 
@@ -20,6 +23,7 @@ export class ProductComponent {
     }
     this._purchaseService.addProductToCart(cartProd).subscribe(()=>{
       console.log("added");
+      this._toastrService.success("Product added to the cart","Success");
       
     })
   }
