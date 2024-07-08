@@ -4,6 +4,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { CartComponent } from './cart/cart.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ProductComponent } from './products-list/product/product.component';
+import { PurchaseComponent } from './purchase.component';
 
 
 
@@ -12,10 +13,15 @@ import { ProductComponent } from './products-list/product/product.component';
     ProductsListComponent,
     CartComponent,
     NavigationBarComponent,
-    ProductComponent
+    ProductComponent,
+    PurchaseComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ProductsListComponent,
+    CartComponent
   ]
 })
 export class PurchaseModule { }
