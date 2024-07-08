@@ -8,6 +8,7 @@ import { ProductsListComponent } from './purchase/products-list/products-list.co
 import { CartComponent } from './purchase/cart/cart.component';
 import { ProductComponent } from './purchase/products-list/product/product.component';
 import { HttpClient, HttpClientModule, HttpHandler } from "@angular/common/http"
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClient, HttpClientModule, HttpHandler } from "@angular/common/http"
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
